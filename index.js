@@ -20,7 +20,7 @@ const analyticsDataClient = new BetaAnalyticsDataClient({
 
 const PROPERTY_ID = process.env.GA4_PROPERTY_ID; // Reemplaza con el ID real
 
-app.get("/express-bosanet", async (req, res) => {
+app.get("/", async (req, res) => {
   const {
     startDate,
     endDate,
@@ -77,7 +77,7 @@ app.get("/express-bosanet", async (req, res) => {
   }
 });
 
-app.get("/express-bosanet/products", async (req, res) => {
+app.get("/products", async (req, res) => {
   const { startDate, endDate } = {
     ...getDateRange(),
     ...req.query,
